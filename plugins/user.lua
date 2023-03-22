@@ -13,14 +13,24 @@ return {
     "mbbill/undotree",
     event = "BufRead"
   },
-  {
-    "github/copilot.vim",
-    event = "BufRead"
-  },
-  {
-    "folke/zen-mode.nvim",
-    lazy = false
-  },
+  -- {
+  --   "zbirenbaum/copilot.lua",
+  --   event = "BufRead",
+  --   config = function()
+  --     require("copilot").setup({
+  --       suggestion = { enabled = false },
+  --       panel = { enabled = false },
+  --     })
+  --   end
+  -- },
+  -- {
+  --   "zbirenbaum/copilot-cmp",
+  --   after = { "copilot.lua" },
+  --   event = "BufRead",
+  --   config = function()
+  --     require("copilot_cmp").setup()
+  --   end
+  -- },
 
   {
     "Pocco81/auto-save.nvim",
