@@ -6,7 +6,7 @@
 return {
   -- first key is the mode
   n = {
-    ["<leader>uU"] = { "vim.cmd.UndotreeToggle", desc = "Toggle Undotree" },
+    ["<leader>uU"] = { "<cmd>UndotreeToggle<cr>", desc = "Toggle Undotree" },
     -- second key is the lefthand side of the map
     -- mappings seen under group name "Buffer"
     ["<leader>bn"] = { "<cmd>tabnew<cr>", desc = "New tab" },
@@ -19,6 +19,7 @@ return {
       end,
       desc = "Pick to close",
     },
+    ["<leader><leader>r"] = { "<D-R>", desc = "Rust Run" },
     -- tables with the `name` key will be registered with which-key if it's installed
     -- this is useful for naming menus
     ["<leader>b"] = { name = "Buffers" },

@@ -17,6 +17,18 @@ return {
     diagnostics_mode = 3,            -- set the visibility of diagnostics in the UI (0=off, 1=only show in status line, 2=virtual text off, 3=all on)
     icons_enabled = true,            -- disable icons in the UI (disable if no nerd font is available, requires :PackerSync after changing)
     ui_notifications_enabled = true, -- disable notifications when toggling UI elements
+    clipboard = {
+      name = "WslClipboard",         -- set the clipboard to use (unnamedplus is the default)
+      copy = {
+        ["+"] = 'clip.exe',          -- don't copy to system clipboard
+        ["*"] = 'clip.exe',          -- don't copy to system clipboard
+      },
+      paste = {
+        ["+"] = 'powershell.exe -c [Console]::Out.Write($(Get-Clipboard -Raw).tostring().replace("`r",""))',
+        ["*"] = 'powershell.exe -c [Console]::Out.Write($(Get-Clipboard -Raw).tostring().replace("`r",""))',
+      },
+      cache_enabled = 0, -- cache yank history (0=disabled, 1=enabled)
+    },
   },
 }
 -- If you need more control, you can use the function()...end notation

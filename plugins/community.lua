@@ -14,9 +14,16 @@ return {
   { import = "astrocommunity.colorscheme.tokyonight" },
   { import = "astrocommunity.colorscheme.onigiri" },
   { import = "astrocommunity.colorscheme.oxocarbon" },
-  { import = "astrocommunity.colorscheme.rose-pine" },
+  { import = "astrocommunity.colorscheme.rose-pine", },
   { import = "astrocommunity.editing-support.nvim-ts-rainbow2", },
   { import = "astrocommunity.editing-support.zen-mode-nvim", },
   { import = "astrocommunity.utility.neodim", },
   { import = "astrocommunity.note-taking.neorg", },
+  { import = "astrocommunity.pack.rust" },
+  {
+    "rose-pine",
+    opts = {
+      disable_italics = true,
+    }
+  }
 }
