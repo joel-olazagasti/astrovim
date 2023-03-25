@@ -17,9 +17,17 @@ return {
   { import = "astrocommunity.colorscheme.rose-pine", },
   { import = "astrocommunity.editing-support.nvim-ts-rainbow2", },
   { import = "astrocommunity.editing-support.zen-mode-nvim", },
+  { import = "astrocommunity.editing-support.todo-comments-nvim", },
   { import = "astrocommunity.utility.neodim", },
   { import = "astrocommunity.note-taking.neorg", },
   { import = "astrocommunity.pack.rust" },
+  { import = "astrocommunity.pack.tailwindcss" },
+  { import = "astrocommunity.pack.python" },
+  { import = "astrocommunity.pack.typescript" },
+  { import = "astrocommunity.pack.markdown" },
+  { import = "astrocommunity.pack.json" },
+  { import = "astrocommunity.pack.toml" },
+  { import = "astrocommunity.pack.yaml" },
   {
     "rose-pine",
     opts = {
