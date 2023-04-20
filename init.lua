@@ -22,6 +22,8 @@ return {
   diagnostics = {
     virtual_text = true,
     underline = true,
+    update_in_insert = true,
+    signs = true,
   },
   lsp = {
     -- customize lsp formatting options
@@ -48,6 +50,18 @@ return {
     servers = {
       -- "pyright"
     },
+    config = {
+      rust_analyzer = {
+        -- rust-analyzer specific options
+        settings = {
+          ["rust-analyzer"] = {
+            checkOnSave = {
+              command = "clippy",
+            },
+          },
+        },
+      }
+    }
   },
   -- Configure require("lazy").setup() options
   lazy = {

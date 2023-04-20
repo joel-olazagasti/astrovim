@@ -14,15 +14,27 @@ return {
     event = "BufRead"
   },
   {
-    "tmillr/sos.nvim",
+    "theprimeagen/vim-be-good",
+    lazy = false
+  },
+  {
+    "theprimeagen/harpoon",
     lazy = false,
     config = function()
-      require("sos").setup({
-        autowrite = "all",
-        timeout = 10000,
-      })
+      require("harpoon").setup()
+      require("telescope").load_extension("harpoon")
     end,
   }
+  -- {
+  --   "tmillr/sos.nvim",
+  --   lazy = false,
+  --   config = function()
+  --     require("sos").setup({
+  --       autowrite = "all",
+  --       timeout = 10000,
+  --     })
+  --   end,
+  -- }
 
   -- {
   --   "zbirenbaum/copilot.lua",

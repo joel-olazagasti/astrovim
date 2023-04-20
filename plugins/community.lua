@@ -19,12 +19,12 @@ return {
   { import = "astrocommunity.editing-support.zen-mode-nvim", },
   { import = "astrocommunity.editing-support.todo-comments-nvim", },
   { import = "astrocommunity.utility.neodim", },
-  { import = "astrocommunity.note-taking.neorg", },
+  { import = "astrocommunity.note-taking.obsidian-nvim", },
   { import = "astrocommunity.pack.rust" },
-  { import = "astrocommunity.pack.tailwindcss" },
-  { import = "astrocommunity.pack.python" },
-  { import = "astrocommunity.pack.typescript" },
-  { import = "astrocommunity.pack.markdown" },
+  -- { import = "astrocommunity.pack.tailwindcss" },
+  -- { import = "astrocommunity.pack.python" },
+  -- { import = "astrocommunity.pack.typescript" },
+  -- { import = "astrocommunity.pack.markdown" },
   { import = "astrocommunity.pack.json" },
   { import = "astrocommunity.pack.toml" },
   { import = "astrocommunity.pack.yaml" },
@@ -33,5 +33,23 @@ return {
     opts = {
       disable_italics = true,
     }
-  }
+  },
+  {
+    "obsidian.nvim",
+    opts = {
+      dir = "/mnt/c/Users/olaza/OneDrive/Documents/obsidian/obsidian/",
+      completion = {
+        nvim_cmp = true
+      },
+      notes_subdir = "notes",
+      daily_notes = {
+        folder = "notes/daily"
+      },
+      templates = {
+        subdir = "templates",
+        date_format = "%Y-%m-%d-%a",
+        time_format = "%H:%M",
+      },
+    },
+  },
 }
