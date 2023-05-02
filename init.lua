@@ -17,12 +17,12 @@ return {
     },
   },
   -- Set colorscheme to use
-  colorscheme = "rose-pine",
+  colorscheme = "nightfox",
   -- Diagnostics configuration (for vim.diagnostics.config({...})) when diagnostics are on
   diagnostics = {
     virtual_text = true,
     underline = true,
-    update_in_insert = true,
+    update_in_insert = false,
     signs = true,
   },
   lsp = {
@@ -50,18 +50,21 @@ return {
     servers = {
       -- "pyright"
     },
-    config = {
-      rust_analyzer = {
-        -- rust-analyzer specific options
-        settings = {
-          ["rust-analyzer"] = {
-            checkOnSave = {
-              command = "clippy",
-            },
-          },
-        },
-      }
-    }
+    -- config = {
+    --   rust_analyzer = {
+    --     -- rust-analyzer specific options
+    --     settings = {
+    --       ["rust-analyzer"] = {
+    --         checkOnSave = {
+    --           command = "clippy",
+    --         },
+    --         diagnostics = {
+    --           enable = true,
+    --         },
+    --       },
+    --     },
+    --   }
+    -- }
   },
   -- Configure require("lazy").setup() options
   lazy = {
@@ -78,6 +81,8 @@ return {
   -- anything that doesn't fit in the normal config locations above can go here
   polish = function()
     -- Set up custom filetypes
+    vim.api.nvim_set_keymap("n", "<C-d>", "<C-d>zz", { noremap = true, silent = true })
+    vim.api.nvim_set_keymap("n", "<C-u>", "<C-u>zz", { noremap = true, silent = true })
     -- vim.filetype.add {
     --   extension = {
     --     foo = "fooscript",

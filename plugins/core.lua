@@ -43,8 +43,13 @@ return {
   --   end,
   -- },
   {
-    "windwp/nvim-autopairs", enabled = false
+    "windwp/nvim-autopairs", enabled = true
   },
+  {
+    -- disable heirline
+    "rebelot/heirline.nvim",
+    enabled = true
+  }
 
   --   config = function(plugin, opts)
   --     require "plugins.configs.nvim-autopairs"(plugin, opts) -- include the default astronvim config that calls the setup call

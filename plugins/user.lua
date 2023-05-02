@@ -9,10 +9,10 @@ return {
   --     require("lsp_signature").setup()
   --   end,
   -- },
-  {
-    "mbbill/undotree",
-    event = "BufRead"
-  },
+  -- {
+  --   "mbbill/undotree",
+  --   event = "BufRead"
+  -- },
   {
     "theprimeagen/vim-be-good",
     lazy = false
